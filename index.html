@@ -2337,6 +2337,15 @@
             object-fit: cover;
             display: block;
         }
+        header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
     </style>
 </head>
 
@@ -4891,9 +4900,29 @@ I hereby confirm that all provided information is accurate and complete.
         }
 
     </script>
+    <script>
+  let lastScroll = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+      // اسكرول لتحت → اخفي الهيدر
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // اسكرول لفوق → اظهر الهيدر
+      header.style.transform = "translateY(0)";
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
+
 </body>
 
 </html>
+
 
 
 
