@@ -4916,10 +4916,34 @@ I hereby confirm that all provided information is accurate and complete.
     lastScroll = currentScroll;
   });
 </script>
+<!-- إجبار الموبايل على عرض نسخة سطح المكتب -->
+<meta name="viewport" content="width=1200, initial-scale=0.3">
+
+<style>
+  /* نجبر الصفحة إنها تتصرف كأنها شاشة كمبيوتر */
+  html, body {
+    min-width: 1200px !important;
+    overflow-x: auto !important;
+  }
+</style>
+
+<script>
+  // إجبار الموبايل على تثبيت الميتا فيو
+  (function() {
+    var mv = document.querySelector('meta[name="viewport"]');
+    if (!mv) {
+      mv = document.createElement('meta');
+      mv.name = "viewport";
+      document.head.appendChild(mv);
+    }
+    mv.setAttribute("content", "width=1200, initial-scale=0.3, maximum-scale=0.3, user-scalable=no");
+  })();
+</script>
 
 </body>
 
 </html>
+
 
 
 
