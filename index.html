@@ -2341,25 +2341,6 @@
         }
        
 
-/* إلغاء كل قواعد الموبايل تماماً وإجبار الموقع يتصرف كأنه كمبيوتر */
-@media only screen and (max-width: 1024px) {
-    html, body {
-        width: 1024px !important;
-        overflow-x: hidden !important;
-    }
-
-    * {
-        max-width: 100% !important;
-    }
-
-    /* تعطيل أي تصميم موبايل معمول بالكلاسات */
-    .mobile, .mobile-only, .is-mobile, [class*="mobile"] {
-        display: none !important;
-    }
-    .desktop, .desktop-only, [class*="desktop"] {
-        display: block !important;
-    }
-}
 
 
 
@@ -4935,10 +4916,23 @@ I hereby confirm that all provided information is accurate and complete.
     lastScroll = currentScroll;
   });
 </script>
+<script>
+(function() {
+    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+        Object.defineProperty(navigator, 'userAgent', {
+            get: function () { 
+                return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
+            }
+        });
+    }
+})();
+</script>
 
 </body>
 
 </html>
+
 
 
 
