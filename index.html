@@ -2338,6 +2338,842 @@
             display: block;
         }
        
+/* ============================================
+   MOBILE OPTIMIZATION - PROFESSIONAL
+   ============================================ */
+
+/* Smooth Scrolling for All Devices */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large Tablets & Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-id-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .license-certificate {
+        padding: 2rem 1.5rem;
+    }
+
+    .license-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .transformation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.35rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    /* Header */
+    .header-top {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header-logo {
+        justify-content: center;
+    }
+
+    .header-title h1 {
+        font-size: 1.25rem;
+    }
+
+    .header-title p {
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 0.875rem;
+        padding: 0 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+    }
+
+    /* Stats Section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+    }
+
+    .stat-item:nth-child(2n) {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    body.rtl .stat-item:nth-child(2n) {
+        border-left: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    /* ID Card */
+    .id-photo {
+        width: 150px;
+        height: 180px;
+    }
+
+    /* License Certificate */
+    .license-certificate {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .mcit-logo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .license-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .license-title {
+        font-size: 1.35rem;
+    }
+
+    .license-text {
+        font-size: 0.95rem;
+    }
+
+    .license-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .seal-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 10px;
+    }
+
+    body.rtl .timeline::before {
+        left: auto;
+        right: 10px;
+    }
+
+    .timeline-item {
+        margin-left: 50px;
+    }
+
+    body.rtl .timeline-item {
+        margin-left: 0;
+        margin-right: 50px;
+    }
+
+    .timeline-dot {
+        left: 0;
+        width: 16px;
+        height: 16px;
+    }
+
+    body.rtl .timeline-dot {
+        left: auto;
+        right: 0;
+    }
+
+    .timeline-content {
+        padding: 1.25rem;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+
+    /* Achievements */
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-seal {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-badge {
+        padding: 2.5rem 1.5rem;
+        font-size: 3rem;
+    }
+
+    .project-info {
+        padding: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Modal */
+    .modal {
+        padding: 1rem 0;
+    }
+
+    .modal-content {
+        margin: 0 0.5rem;
+        border-radius: 4px;
+    }
+
+    .modal-close {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    body.rtl .modal-close {
+        right: auto;
+        left: 0.5rem;
+    }
+
+    .modal-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-header p {
+        font-size: 0.95rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .presentation-section h3 {
+        font-size: 1.35rem;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .demo-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Initiatives */
+    .official-notice {
+        flex-direction: column;
+        padding: 1.5rem;
+        margin: 0 1rem 2rem;
+    }
+
+    .notice-icon {
+        font-size: 2rem;
+    }
+
+    .notice-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .initiative-card {
+        padding: 1.5rem;
+    }
+
+    .initiative-header-official {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .initiative-title {
+        font-size: 1.25rem;
+    }
+
+    .initiative-requirements ul,
+    .initiative-benefits .benefits-grid {
+        gap: 0.75rem;
+    }
+
+    .benefit-item {
+        padding: 0.75rem;
+    }
+
+    /* Contact */
+    .contact-box {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-value {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-emblem {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    /* Container */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* Header */
+    .eagle-emblem {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-title h1 {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    nav a {
+        padding: 0.4rem;
+    }
+
+    .lang-switch {
+        padding: 0.4rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    /* ID Card */
+    .hero-id-card {
+        padding: 1.5rem;
+    }
+
+    .id-photo {
+        width: 130px;
+        height: 160px;
+    }
+
+    /* License */
+    .license-certificate {
+        padding: 1.25rem;
+        margin: 0 0.5rem;
+    }
+
+    .mcit-logo-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .license-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .license-title {
+        font-size: 1.15rem;
+    }
+
+    .seal-image {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .seal-text {
+        font-size: 0.75rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        margin-left: 40px;
+    }
+
+    body.rtl .timeline-item {
+        margin-left: 0;
+        margin-right: 40px;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-year {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    /* Achievements */
+    .achievement-card {
+        padding: 1.5rem;
+    }
+
+    .achievement-seal {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .achievement-title {
+        font-size: 1rem;
+    }
+
+    /* Transformations */
+    .transformation-header {
+        padding: 1.5rem;
+    }
+
+    .transformation-title {
+        font-size: 1.25rem;
+    }
+
+    .transformation-body {
+        padding: 1.5rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .before-value,
+    .after-value {
+        font-size: 1.35rem;
+    }
+
+    /* Projects */
+    .project-badge {
+        padding: 2rem 1rem;
+        font-size: 2.5rem;
+    }
+
+    .project-badge::after {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    .project-info {
+        padding: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.15rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .project-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        margin: 0 0.25rem;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+
+    .presentation-section {
+        margin-bottom: 2rem;
+    }
+
+    .presentation-section h3 {
+        font-size: 1.15rem;
+    }
+
+    .project-overview {
+        padding: 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    /* Initiatives */
+    .official-notice {
+        margin: 0 0.5rem 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .initiative-card {
+        padding: 1.25rem;
+    }
+
+    .initiative-seal {
+        width: 40px;
+        height: 40px;
+    }
+
+    .initiative-number {
+        font-size: 0.75rem;
+    }
+
+    .initiative-badge-official {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .initiative-title {
+        font-size: 1.1rem;
+    }
+
+    .initiative-meta {
+        gap: 0.75rem;
+    }
+
+    .meta-label,
+    .meta-value {
+        font-size: 0.8rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        padding: 0.65rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-whatsapp-official {
+        font-size: 0.85rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Contact */
+    .contact-box {
+        padding: 1.25rem;
+    }
+
+    .contact-item {
+        padding: 0.875rem;
+    }
+
+    .contact-label {
+        font-size: 0.8rem;
+    }
+
+    .contact-value {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 0 1rem;
+    }
+
+    .footer-emblem {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+    .footer-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    /* Certificate Modal */
+    .certificate-modal {
+        padding: 1rem;
+    }
+
+    .certificate-close {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        padding: 3px 10px;
+    }
+
+    .certificate-image-container {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .project-badge {
+        font-size: 2rem;
+        padding: 1.5rem 0.75rem;
+    }
+
+    .initiative-title {
+        font-size: 1rem;
+    }
+}
+
+/* Landscape Mode Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .modal-header {
+        padding: 1.5rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    button,
+    a,
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    nav a {
+        padding: 0.75rem;
+    }
+
+    /* Remove hover effects on touch devices */
+    .project-card:hover,
+    .achievement-card:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    /* But keep active state */
+    .project-card:active,
+    .achievement-card:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    nav,
+    .lang-switch,
+    .modal-close,
+    .btn,
+    footer {
+        display: none !important;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    * {
+        color: #000 !important;
+        background: #fff !important;
+    }
+}
 
 
     </style>
@@ -4916,6 +5752,7 @@ I hereby confirm that all provided information is accurate and complete.
 </body>
 
 </html>
+
 
 
 
