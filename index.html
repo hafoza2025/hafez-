@@ -2339,28 +2339,123 @@
         }
        
 /* ============================================
-   MOBILE OPTIMIZATION - PROFESSIONAL
+   COMPLETE MOBILE OPTIMIZATION - PROFESSIONAL
+   تحسين كامل للموبايل - احترافي
    ============================================ */
-
-/* Smooth Scrolling for All Devices */
-* {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
 
 /* ============================================
-   RESPONSIVE BREAKPOINTS
+   BASE MOBILE FIXES
    ============================================ */
+@media (max-width: 768px) {
+    /* Prevent Horizontal Scroll */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 
-/* Large Tablets & Small Laptops (1024px and below) */
-@media (max-width: 1024px) {
+    * {
+        max-width: 100%;
+    }
+
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1rem;
+        overflow-x: hidden;
+    }
+
+    /* Typography - Mobile Optimized */
+    h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.65rem;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 1.05rem !important;
+        line-height: 1.3;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* ============================================
+       HEADER - MOBILE
+       ============================================ */
+    header {
+        padding: 0.75rem 0;
+    }
+
+    .header-top {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+    }
+
+    .header-logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .eagle-emblem {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .header-title h1 {
+        font-size: 1.15rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .header-title p {
+        font-size: 0.75rem;
+    }
+
+    .lang-switch {
+        padding: 0.45rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+        justify-content: center;
+        padding: 0 0.5rem;
+    }
+
+    nav li {
+        flex: 0 1 auto;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
+    }
+
+    /* ============================================
+       HERO SECTION - MOBILE
+       ============================================ */
+    .hero {
+        padding: 2rem 0;
     }
 
     .hero-content {
@@ -2368,242 +2463,419 @@ html {
         gap: 2rem;
     }
 
-    .hero-id-card {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .license-certificate {
-        padding: 2rem 1.5rem;
-    }
-
-    .license-details {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .transformation-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .initiatives-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Tablets (768px and below) */
-@media (max-width: 768px) {
-    /* Typography */
-    h1 {
-        font-size: 2rem !important;
-        line-height: 1.3;
-    }
-
-    h2 {
-        font-size: 1.75rem !important;
-        line-height: 1.3;
-    }
-
-    h3 {
-        font-size: 1.35rem !important;
-    }
-
     .hero-text h1 {
-        font-size: 2rem !important;
-        margin-bottom: 1rem;
+        font-size: 1.75rem !important;
+        margin-bottom: 0.75rem;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        margin-bottom: 0.75rem;
     }
 
     .hero-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
     }
 
-    /* Header */
-    .header-top {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    /* ID Card */
+    .hero-id-card {
+        padding: 1.5rem;
+        max-width: 100%;
     }
 
-    .header-logo {
-        justify-content: center;
+    .id-photo {
+        width: 140px;
+        height: 170px;
+        margin-bottom: 1rem;
     }
 
-    .header-title h1 {
-        font-size: 1.25rem;
+    /* ============================================
+       STATS SECTION - MOBILE
+       ============================================ */
+    .stats {
+        padding: 2rem 0;
     }
 
-    .header-title p {
-        font-size: 0.8rem;
-    }
-
-    nav ul {
-        gap: 1rem;
-        font-size: 0.875rem;
-        padding: 0 0.5rem;
-    }
-
-    nav a {
-        padding: 0.5rem;
-    }
-
-    /* Stats Section */
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .stat-item {
-        border-right: none !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding: 1rem;
+        border-right: none !important;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .stat-item:nth-child(2n) {
-        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
     }
 
-    body.rtl .stat-item:nth-child(2n) {
-        border-left: none;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    body.rtl .stat-item:nth-child(odd) {
+        border-right: none !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .stat-item:nth-last-child(-n+2) {
+        border-bottom: none;
     }
 
     .stat-number {
         font-size: 2rem;
+        margin-bottom: 0.35rem;
     }
 
     .stat-label {
         font-size: 0.85rem;
     }
 
-    /* ID Card */
-    .id-photo {
-        width: 150px;
-        height: 180px;
+    /* ============================================
+       LICENSE CERTIFICATE - MOBILE
+       ============================================ */
+    .license-section {
+        padding: 2rem 0;
     }
 
-    /* License Certificate */
+    .section-header {
+        margin-bottom: 1.5rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .section-header p {
+        font-size: 0.85rem;
+    }
+
     .license-certificate {
-        padding: 1.5rem;
-        margin: 0 1rem;
+        padding: 1.25rem;
+        margin: 0 0.5rem;
     }
 
     .mcit-logo-container {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 0.75rem;
+    }
+
+    .license-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     .license-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .license-header p {
+        font-size: 0.95rem;
     }
 
     .license-title {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .license-text {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .license-details {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .license-item {
+        padding: 1rem;
+    }
+
+    .license-label {
+        font-size: 0.75rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .license-value {
+        font-size: 1rem;
+    }
+
+    .license-actions {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .license-footer {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.25rem;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     .seal-image {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
+        font-size: 1.75rem;
+        padding: 5px;
     }
 
-    /* Timeline */
+    .seal-text {
+        font-size: 0.75rem;
+    }
+
+    /* ============================================
+       ABOUT SECTION - MOBILE
+       ============================================ */
+    .about-section {
+        padding: 2rem 0;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    /* ============================================
+       TIMELINE - MOBILE
+       ============================================ */
+    .timeline-section {
+        padding: 2rem 0;
+    }
+
     .timeline::before {
-        left: 10px;
+        left: 15px;
+        width: 2px;
     }
 
     body.rtl .timeline::before {
         left: auto;
-        right: 10px;
+        right: 15px;
     }
 
     .timeline-item {
-        margin-left: 50px;
+        margin-left: 45px;
+        margin-bottom: 1.75rem;
     }
 
     body.rtl .timeline-item {
         margin-left: 0;
-        margin-right: 50px;
+        margin-right: 45px;
     }
 
     .timeline-dot {
-        left: 0;
+        left: 5px;
         width: 16px;
         height: 16px;
     }
 
     body.rtl .timeline-dot {
         left: auto;
-        right: 0;
+        right: 5px;
     }
 
     .timeline-content {
         padding: 1.25rem;
     }
 
-    .timeline-title {
-        font-size: 1.1rem;
+    .timeline-year {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.75rem;
+        margin-bottom: 0.75rem;
     }
 
-    /* Achievements */
+    .timeline-title {
+        font-size: 1.15rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .timeline-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    /* ============================================
+       ACHIEVEMENTS - MOBILE
+       ============================================ */
+    .achievements-section {
+        padding: 2rem 0;
+    }
+
     .achievements-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .achievement-seal {
-        width: 60px;
-        height: 60px;
-        font-size: 1.75rem;
-    }
-
-    /* Projects */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-badge {
-        padding: 2.5rem 1.5rem;
-        font-size: 3rem;
-    }
-
-    .project-info {
+    .achievement-card {
         padding: 1.5rem;
     }
 
-    .project-title {
+    .achievement-seal {
+        width: 55px;
+        height: 55px;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .achievement-source {
+        font-size: 0.85rem;
+    }
+
+    /* ============================================
+       TRANSFORMATIONS - MOBILE
+       ============================================ */
+    .transformations-section {
+        padding: 2rem 0;
+    }
+
+    .transformation-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .transformation-header {
+        padding: 1.5rem;
+    }
+
+    .transformation-title {
         font-size: 1.25rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .transformation-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .transformation-body {
+        padding: 1.5rem;
+    }
+
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .before-value,
+    .after-value {
+        font-size: 1.5rem;
+    }
+
+    .result-badge {
+        padding: 0.65rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       PROJECTS - MOBILE
+       ============================================ */
+    .projects-section {
+        padding: 2rem 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        margin: 0;
+    }
+
+    .project-badge {
+        padding: 2.25rem 1.5rem;
+        font-size: 2.75rem;
+    }
+
+    .project-badge::after {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        bottom: 0.75rem;
+    }
+
+    .project-info {
+        padding: 1.35rem;
+    }
+
+    .project-status {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
     }
 
     .project-meta {
         flex-direction: column;
         gap: 0.5rem;
+        margin-bottom: 1rem;
     }
 
-    /* Modal */
+    .project-meta-item {
+        font-size: 0.8rem;
+    }
+
+    .project-tags {
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.65rem;
+    }
+
+    .project-action {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       PROJECT MODAL - MOBILE
+       ============================================ */
     .modal {
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .modal-content {
         margin: 0 0.5rem;
-        border-radius: 4px;
+        max-width: 100%;
     }
 
     .modal-close {
-        width: 35px;
-        height: 35px;
-        font-size: 1.25rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1.35rem;
         top: 0.5rem;
         right: 0.5rem;
     }
@@ -2614,11 +2886,12 @@ html {
     }
 
     .modal-header {
-        padding: 2rem 1.5rem;
+        padding: 1.75rem 1.25rem;
     }
 
     .modal-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
     }
 
     .modal-header p {
@@ -2626,11 +2899,24 @@ html {
     }
 
     .modal-body {
-        padding: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .presentation-section {
+        margin-bottom: 2rem;
     }
 
     .presentation-section h3 {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.85rem;
+        padding-bottom: 0.65rem;
+    }
+
+    .project-overview {
+        padding: 1.25rem;
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
     }
 
     .project-gallery {
@@ -2639,7 +2925,25 @@ html {
     }
 
     .gallery-item img {
-        height: 250px;
+        height: 220px;
+    }
+
+    .gallery-overlay {
+        font-size: 1.75rem;
+    }
+
+    .video-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .demo-section {
+        padding: 1.5rem;
+    }
+
+    .demo-notice {
+        padding: 0.85rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
     }
 
     .demo-buttons {
@@ -2647,16 +2951,28 @@ html {
         gap: 0.75rem;
     }
 
-    .btn {
+    .demo-buttons .btn {
         width: 100%;
-        text-align: center;
     }
 
-    /* Initiatives */
+    /* ============================================
+       INITIATIVES - MOBILE (COMPLETE FIX)
+       ============================================ */
+    .initiatives-section {
+        padding: 2rem 0;
+    }
+
+    .initiatives-section .container {
+        padding: 0 0.75rem;
+    }
+
+    /* Official Notice */
     .official-notice {
         flex-direction: column;
-        padding: 1.5rem;
-        margin: 0 1rem 2rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 0 0 2rem;
+        gap: 0.75rem;
     }
 
     .notice-icon {
@@ -2664,39 +2980,226 @@ html {
     }
 
     .notice-content h3 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
     }
 
+    .notice-content p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    /* Initiatives Grid */
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    /* Initiative Card */
     .initiative-card {
-        padding: 1.5rem;
+        padding: 1.15rem;
+        margin: 0;
     }
 
     .initiative-header-official {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.65rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .initiative-seal {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+    }
+
+    .initiative-number {
+        font-size: 0.68rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .initiative-badge-official {
+        font-size: 0.63rem;
+        padding: 0.25rem 0.6rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .initiative-icon {
+        font-size: 2rem;
+        margin-bottom: 0.65rem;
     }
 
     .initiative-title {
-        font-size: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
     }
 
-    .initiative-requirements ul,
-    .initiative-benefits .benefits-grid {
-        gap: 0.75rem;
+    /* Meta Info */
+    .initiative-meta {
+        flex-direction: column;
+        gap: 0.45rem;
+        margin-bottom: 1rem;
+        padding: 0.7rem;
+        background: var(--gov-gray-50);
+        border-radius: 4px;
+    }
+
+    .meta-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--gov-gray-200);
+    }
+
+    .meta-item:last-child {
+        border-bottom: none;
+    }
+
+    .meta-label {
+        font-size: 0.73rem;
+        font-weight: 600;
+        color: var(--gov-gray-600);
+    }
+
+    .meta-value {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--egypt-black);
+    }
+
+    /* Description */
+    .initiative-description-official {
+        margin-bottom: 1rem;
+    }
+
+    .initiative-description-official h4 {
+        font-size: 0.88rem;
+        margin-bottom: 0.5rem;
+        color: var(--egypt-red);
+    }
+
+    .initiative-description-official p {
+        font-size: 0.78rem;
+        line-height: 1.6;
+        color: var(--gov-gray-700);
+    }
+
+    /* Requirements */
+    .initiative-requirements {
+        margin-bottom: 1rem;
+    }
+
+    .initiative-requirements h4 {
+        font-size: 0.88rem;
+        margin-bottom: 0.6rem;
+        color: var(--egypt-black);
+    }
+
+    .initiative-requirements ul {
+        padding-left: 1.15rem;
+    }
+
+    .initiative-requirements li {
+        font-size: 0.76rem;
+        line-height: 1.55;
+        margin-bottom: 0.45rem;
+        color: var(--gov-gray-700);
+    }
+
+    /* Benefits */
+    .initiative-benefits {
+        margin-bottom: 1rem;
+    }
+
+    .initiative-benefits h4 {
+        font-size: 0.88rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
     }
 
     .benefit-item {
-        padding: 0.75rem;
+        padding: 0.6rem;
+        font-size: 0.76rem;
+        background: var(--gov-gray-50);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
-    /* Contact */
+    .benefit-icon {
+        font-size: 1.15rem;
+        flex-shrink: 0;
+    }
+
+    /* Documents */
+    .initiative-documents {
+        margin-bottom: 1.15rem;
+    }
+
+    .initiative-documents h4 {
+        font-size: 0.88rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .document-item {
+        font-size: 0.76rem;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--gov-gray-200);
+    }
+
+    .document-item:last-child {
+        border-bottom: none;
+    }
+
+    /* WhatsApp Button */
+    .btn-whatsapp-official {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.83rem;
+        margin-top: 0.85rem;
+    }
+
+    /* Initiative Footer */
+    .initiative-footer-official {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .initiative-footer-official p {
+        font-size: 0.68rem;
+        line-height: 1.45;
+        text-align: center;
+        color: var(--gov-gray-600);
+    }
+
+    /* ============================================
+       CONTACT SECTION - MOBILE
+       ============================================ */
+    .contact-section {
+        padding: 2rem 0;
+    }
+
     .contact-box {
         padding: 1.5rem;
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
 
     .contact-item {
         padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-label {
+        font-size: 0.75rem;
+        margin-bottom: 0.4rem;
     }
 
     .contact-value {
@@ -2704,355 +3207,52 @@ html {
         word-break: break-word;
     }
 
-    /* Footer */
-    .footer-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .footer-emblem {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
-
-/* Mobile Phones (480px and below) */
-@media (max-width: 480px) {
-    /* Container */
-    .container {
-        padding: 0 1rem;
-    }
-
-    .section {
-        padding: 2.5rem 0;
-    }
-
-    /* Typography */
-    h1 {
-        font-size: 1.75rem !important;
-    }
-
-    h2 {
-        font-size: 1.5rem !important;
-    }
-
-    h3 {
-        font-size: 1.2rem !important;
-    }
-
-    .hero-text h1 {
-        font-size: 1.75rem !important;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    p, li {
-        font-size: 0.9rem;
-    }
-
-    /* Buttons */
-    .btn {
-        padding: 0.65rem 1.5rem;
-        font-size: 0.875rem;
-    }
-
-    /* Header */
-    .eagle-emblem {
-        width: 40px;
-        height: 40px;
-    }
-
-    .header-title h1 {
-        font-size: 1.1rem;
-    }
-
-    nav ul {
-        gap: 0.5rem;
-        font-size: 0.8rem;
-    }
-
-    nav a {
-        padding: 0.4rem;
-    }
-
-    .lang-switch {
-        padding: 0.4rem 1rem;
-        font-size: 0.875rem;
-    }
-
-    /* Stats */
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .stat-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        border-left: none !important;
-        border-right: none !important;
-    }
-
-    .stat-item:last-child {
-        border-bottom: none;
-    }
-
-    .stat-number {
-        font-size: 1.75rem;
-    }
-
-    /* ID Card */
-    .hero-id-card {
-        padding: 1.5rem;
-    }
-
-    .id-photo {
-        width: 130px;
-        height: 160px;
-    }
-
-    /* License */
-    .license-certificate {
-        padding: 1.25rem;
-        margin: 0 0.5rem;
-    }
-
-    .mcit-logo-container {
-        width: 80px;
-        height: 80px;
-    }
-
-    .license-header h2 {
-        font-size: 1.25rem;
-    }
-
-    .license-title {
-        font-size: 1.15rem;
-    }
-
-    .seal-image {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
-
-    .seal-text {
-        font-size: 0.75rem;
-    }
-
-    /* Timeline */
-    .timeline-item {
-        margin-left: 40px;
-    }
-
-    body.rtl .timeline-item {
-        margin-left: 0;
-        margin-right: 40px;
-    }
-
-    .timeline-content {
-        padding: 1rem;
-    }
-
-    .timeline-year {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.75rem;
-    }
-
-    /* Achievements */
-    .achievement-card {
-        padding: 1.5rem;
-    }
-
-    .achievement-seal {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-
-    .achievement-title {
-        font-size: 1rem;
-    }
-
-    /* Transformations */
-    .transformation-header {
-        padding: 1.5rem;
-    }
-
-    .transformation-title {
-        font-size: 1.25rem;
-    }
-
-    .transformation-body {
-        padding: 1.5rem;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-        padding: 0.75rem 0.5rem;
-        font-size: 0.85rem;
-    }
-
-    .before-value,
-    .after-value {
-        font-size: 1.35rem;
-    }
-
-    /* Projects */
-    .project-badge {
-        padding: 2rem 1rem;
-        font-size: 2.5rem;
-    }
-
-    .project-badge::after {
-        font-size: 0.6rem;
-        letter-spacing: 1px;
-    }
-
-    .project-info {
-        padding: 1.25rem;
-    }
-
-    .project-title {
-        font-size: 1.15rem;
-    }
-
-    .project-description {
-        font-size: 0.9rem;
-    }
-
-    .project-tag {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.75rem;
-    }
-
-    /* Modal */
-    .modal-content {
-        margin: 0 0.25rem;
-    }
-
-    .modal-header {
-        padding: 1.5rem 1rem;
-    }
-
-    .modal-header h2 {
-        font-size: 1.25rem;
-    }
-
-    .modal-body {
-        padding: 1rem;
-    }
-
-    .presentation-section {
-        margin-bottom: 2rem;
-    }
-
-    .presentation-section h3 {
-        font-size: 1.15rem;
-    }
-
-    .project-overview {
-        padding: 1.25rem;
-        font-size: 0.9rem;
-    }
-
-    .gallery-item img {
-        height: 200px;
-    }
-
-    /* Initiatives */
-    .official-notice {
-        margin: 0 0.5rem 1.5rem;
-        padding: 1.25rem;
-    }
-
-    .initiative-card {
-        padding: 1.25rem;
-    }
-
-    .initiative-seal {
-        width: 40px;
-        height: 40px;
-    }
-
-    .initiative-number {
-        font-size: 0.75rem;
-    }
-
-    .initiative-badge-official {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.75rem;
-    }
-
-    .initiative-title {
-        font-size: 1.1rem;
-    }
-
-    .initiative-meta {
-        gap: 0.75rem;
-    }
-
-    .meta-label,
-    .meta-value {
-        font-size: 0.8rem;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .benefit-item {
-        padding: 0.65rem;
-        font-size: 0.85rem;
-    }
-
-    .btn-whatsapp-official {
-        font-size: 0.85rem;
-        padding: 0.75rem 1.5rem;
-    }
-
-    /* Contact */
-    .contact-box {
-        padding: 1.25rem;
-    }
-
-    .contact-item {
-        padding: 0.875rem;
-    }
-
-    .contact-label {
-        font-size: 0.8rem;
-    }
-
-    .contact-value {
+    .contact-value a {
         font-size: 0.95rem;
     }
 
-    /* Footer */
-    .footer-content {
-        padding: 0 1rem;
+    /* ============================================
+       FOOTER - MOBILE
+       ============================================ */
+    footer {
+        padding: 2rem 0 1.25rem;
     }
 
     .footer-emblem {
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 0.85rem;
     }
 
     .footer-title {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
+        margin-bottom: 0.4rem;
     }
 
     .footer-subtitle {
-        font-size: 0.875rem;
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 
     .footer-copyright {
-        font-size: 0.8rem;
+        padding-top: 1.25rem;
+        font-size: 0.75rem;
     }
 
-    /* Certificate Modal */
+    /* ============================================
+       CERTIFICATE MODAL - MOBILE
+       ============================================ */
     .certificate-modal {
         padding: 1rem;
     }
@@ -3060,120 +3260,209 @@ html {
     .certificate-close {
         top: 10px;
         right: 10px;
-        font-size: 24px;
-        padding: 3px 10px;
+        font-size: 26px;
+        padding: 4px 11px;
     }
 
     .certificate-image-container {
         padding: 0 0.5rem;
     }
+
+    .certificate-image-container img {
+        margin-bottom: 1.5rem;
+    }
+
+    /* ============================================
+       BUTTONS - MOBILE
+       ============================================ */
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.88rem;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-primary,
+    .btn-outline,
+    .btn-gold {
+        width: auto;
+    }
+
+    /* Full Width Buttons in Specific Sections */
+    .license-actions .btn,
+    .demo-buttons .btn {
+        width: 100%;
+    }
 }
 
-/* Extra Small Devices (360px and below) */
-@media (max-width: 360px) {
+/* ============================================
+   EXTRA SMALL MOBILE (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
     .container {
-        padding: 0 0.75rem;
+        padding: 0 0.85rem;
+    }
+
+    .section {
+        padding: 2rem 0;
     }
 
     h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.6rem !important;
     }
 
     h2 {
         font-size: 1.35rem !important;
     }
 
+    h3 {
+        font-size: 1.15rem !important;
+    }
+
     .hero-text h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.6rem !important;
     }
 
     .btn {
-        padding: 0.6rem 1.25rem;
-        font-size: 0.8rem;
+        padding: 0.65rem 1.35rem;
+        font-size: 0.83rem;
     }
 
     .stat-number {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .project-badge {
-        font-size: 2rem;
-        padding: 1.5rem 0.75rem;
+        font-size: 2.35rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .initiative-card {
+        padding: 1rem;
     }
 
     .initiative-title {
-        font-size: 1rem;
+        font-size: 0.93rem;
+    }
+
+    .meta-label,
+    .meta-value,
+    .initiative-description-official p,
+    .initiative-requirements li,
+    .benefit-item {
+        font-size: 0.73rem;
     }
 }
 
-/* Landscape Mode Optimization */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        padding: 2rem 0;
+/* ============================================
+   TINY SCREENS (360px and below)
+   ============================================ */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.75rem;
     }
 
+    h1 {
+        font-size: 1.45rem !important;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.45rem !important;
+    }
+
+    .btn {
+        font-size: 0.78rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .initiative-card {
+        padding: 0.9rem;
+    }
+
+    .initiative-title {
+        font-size: 0.88rem;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODE - MOBILE
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
     .section {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
     }
 
     .modal-header {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .modal-body {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    .initiative-card {
+        padding: 1rem;
     }
 }
 
-/* Touch Device Optimizations */
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
 @media (hover: none) and (pointer: coarse) {
-    /* Larger touch targets */
+    /* Larger Touch Targets */
     button,
     a,
-    .btn {
+    .btn,
+    nav a,
+    .lang-switch {
         min-height: 44px;
         min-width: 44px;
     }
 
-    nav a {
-        padding: 0.75rem;
-    }
-
-    /* Remove hover effects on touch devices */
+    /* Remove Hover Effects */
     .project-card:hover,
     .achievement-card:hover,
-    .gallery-item:hover {
+    .gallery-item:hover,
+    .initiative-card:hover {
         transform: none;
     }
 
-    /* But keep active state */
+    /* Active States */
     .project-card:active,
-    .achievement-card:active {
-        transform: scale(0.98);
-        opacity: 0.9;
+    .achievement-card:active,
+    .btn:active,
+    .initiative-card:active {
+        transform: scale(0.97);
+        opacity: 0.92;
     }
 }
 
-/* Print Styles */
-@media print {
-    header,
-    nav,
-    .lang-switch,
-    .modal-close,
-    .btn,
-    footer {
-        display: none !important;
-    }
-
-    .section {
-        page-break-inside: avoid;
-    }
-
+/* ============================================
+   SMOOTH SCROLLING & PERFORMANCE
+   ============================================ */
+@media (max-width: 768px) {
     * {
-        color: #000 !important;
-        background: #fff !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .modal-content,
+    .initiative-card,
+    .project-card,
+    .achievement-card {
+        will-change: transform;
     }
 }
+
 
 
     </style>
@@ -5752,6 +6041,7 @@ I hereby confirm that all provided information is accurate and complete.
 </body>
 
 </html>
+
 
 
 
