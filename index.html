@@ -8,7 +8,7 @@
         content="Mohamed Al-Hafez - Founder & CEO of Meta Software. Official Portfolio & Licensed by Ministry of Communications and Information Technology, Egypt.">
     <meta name="keywords" content="Mohamed Al-Hafez, Meta Software, Egypt, Software Development, CEO">
     <meta name="author" content="Mohamed Al-Hafez">
-    <meta name="viewport" content="width=1280">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <title>Mohamed Al-Hafez | Official Portfolio - Licensed by MCIT Egypt</title>
@@ -2341,6 +2341,25 @@
         }
        
 
+/* إلغاء كل قواعد الموبايل تماماً وإجبار الموقع يتصرف كأنه كمبيوتر */
+@media only screen and (max-width: 1024px) {
+    html, body {
+        width: 1024px !important;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        max-width: 100% !important;
+    }
+
+    /* تعطيل أي تصميم موبايل معمول بالكلاسات */
+    .mobile, .mobile-only, .is-mobile, [class*="mobile"] {
+        display: none !important;
+    }
+    .desktop, .desktop-only, [class*="desktop"] {
+        display: block !important;
+    }
+}
 
 
 
@@ -4916,33 +4935,11 @@ I hereby confirm that all provided information is accurate and complete.
     lastScroll = currentScroll;
   });
 </script>
-<!-- إجبار الموبايل على عرض نسخة سطح المكتب -->
-<meta name="viewport" content="width=1200, initial-scale=0.3">
-
-<style>
-  /* نجبر الصفحة إنها تتصرف كأنها شاشة كمبيوتر */
-  html, body {
-    min-width: 1200px !important;
-    overflow-x: auto !important;
-  }
-</style>
-
-<script>
-  // إجبار الموبايل على تثبيت الميتا فيو
-  (function() {
-    var mv = document.querySelector('meta[name="viewport"]');
-    if (!mv) {
-      mv = document.createElement('meta');
-      mv.name = "viewport";
-      document.head.appendChild(mv);
-    }
-    mv.setAttribute("content", "width=1200, initial-scale=0.3, maximum-scale=0.3, user-scalable=no");
-  })();
-</script>
 
 </body>
 
 </html>
+
 
 
 
